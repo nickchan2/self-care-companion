@@ -1,11 +1,21 @@
 <resources>
     <string name="app_name">Self-Care-Companion</string>
     <string name="title_home">Home</string>
+    <string name="title_mood">Mood</string>
     <string name="title_journal">Journal</string>
     <string name="title_habits">Habits</string>
     <string name="title_profile">Profile</string>
     <string name="insights">Insights</string>
     <string name="home_button">Home Button</string>
+    <string name="back_button">← BACK</string>
+    <string name="next_button">NEXT →</string>
+    <string name="mood_prompt">How are you feeling today?</string>
+    <string name="mood_option_1">Happy :)</string>
+    <string name="mood_option_2">Sad :(</string>
+    <string name="mood_option_3">Excited :D</string>
+    <string name="mood_option_4">Stressed :|</string>
+    <string name="mood_option_5">Calm ^_^</string>
+    <string name="mood_option_6">Anxious >:(</string>
     <string name="anxious_mood_report">You\'ve been feeling anxious lately</string>
     <string name="anxious_suggestion_1">Close your eyes and take a deep breath</string>
     <string name="anxious_suggestion_2">Take a walk in nature</string>
