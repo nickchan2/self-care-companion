@@ -33,5 +33,11 @@
         android:id="@+id/navigation_insights"
         android:name="com.example.self_care_companion.ui.insights.InsightsFragment"
         android:label="@string/insights"
-        tools:layout="@layout/fragment_insights" />
+        tools:layout="@layout/fragment_insights" >
+
+        <argument
+            android:name="moodParam"
+            app:argType="string" />
+
+    </fragment>
 </navigation>

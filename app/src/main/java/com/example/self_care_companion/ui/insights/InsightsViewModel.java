@@ -10,13 +10,7 @@ public class InsightsViewModel extends ViewModel {
     private final MutableLiveData<String> suggestionText2 = new MutableLiveData<>();
     private final MutableLiveData<String> suggestionText3 = new MutableLiveData<>();
 
-    String loading = "Loading...";
-
     public InsightsViewModel() {
-        moodReport.setValue(loading);
-        suggestionText1.setValue(loading);
-        suggestionText2.setValue(loading);
-        suggestionText3.setValue(loading);
     }
 
     public LiveData<String> getMoodReport() {
