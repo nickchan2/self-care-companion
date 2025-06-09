@@ -28,4 +28,10 @@
         android:name="com.example.self_care_companion.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_insights"
+        android:name="com.example.self_care_companion.ui.insights.InsightsFragment"
+        android:label="@string/insights"
+        tools:layout="@layout/fragment_insights" />
 </navigation>
