@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:background="@color/background" >
 
     <ImageButton
@@ -13,8 +14,8 @@
         app:srcCompat="@drawable/ic_home_black_24dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
         android:contentDescription="@string/home_button" />
 
     <TextView
@@ -25,6 +26,7 @@
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="#000000"
+        android:layout_marginHorizontal="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageButton"
@@ -33,8 +35,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/suggestion1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginHorizontal="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/moodReport"
@@ -42,7 +45,7 @@
 
     <TextView
         android:id="@+id/suggestionText1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="20sp"
@@ -58,8 +61,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/suggestion2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginHorizontal="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/suggestion1"
@@ -67,7 +71,7 @@
 
         <TextView
             android:id="@+id/suggestionText2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="20sp"
@@ -83,9 +87,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/suggestion3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="200dp"
+        android:layout_marginHorizontal="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/suggestion2"
@@ -93,7 +98,7 @@
 
         <TextView
             android:id="@+id/suggestionText3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="20sp"
