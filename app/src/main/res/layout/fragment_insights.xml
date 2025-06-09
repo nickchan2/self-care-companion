@@ -3,46 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:background="@color/background" >
-
-    <TextView
-        android:id="@+id/insightsTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/insights"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="15dp" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:backgroundTint="@color/button"
         app:srcCompat="@drawable/ic_home_black_24dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
         android:contentDescription="@string/home_button" />
 
     <TextView
         android:id="@+id/moodReport"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:text="@string/anxious_mood_report"
         android:gravity="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginHorizontal="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/insightsTitle"
+        app:layout_constraintTop_toBottomOf="@id/imageButton"
         app:layout_constraintBottom_toTopOf="@id/suggestion1"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/suggestion1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginHorizontal="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/moodReport"
@@ -50,10 +45,11 @@
 
     <TextView
         android:id="@+id/suggestionText1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/anxious_suggestion_1"
         android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#000000"
         android:background="@drawable/border_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,8 +61,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/suggestion2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginHorizontal="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/suggestion1"
@@ -74,10 +71,11 @@
 
         <TextView
             android:id="@+id/suggestionText2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/anxious_suggestion_2"
             android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#000000"
             android:background="@drawable/border_background"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -89,9 +87,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/suggestion3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="200dp"
+        android:layout_marginHorizontal="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/suggestion2"
@@ -99,10 +98,11 @@
 
         <TextView
             android:id="@+id/suggestionText3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/anxious_suggestion_3"
             android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#000000"
             android:background="@drawable/border_background"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
