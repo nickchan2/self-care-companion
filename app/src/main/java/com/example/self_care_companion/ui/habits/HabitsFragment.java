@@ -1,4 +1,4 @@
-package com.example.self_care_companion.ui.dashboard;
+package com.example.self_care_companion.ui.habits;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.self_care_companion.databinding.FragmentDashboardBinding;
+import com.example.self_care_companion.databinding.FragmentHabitsBinding;
 
-public class DashboardFragment extends Fragment {
+public class HabitsFragment extends Fragment {
 
-    private FragmentDashboardBinding binding;
+    private FragmentHabitsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        DashboardViewModel dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
+        HabitsViewModel HabitsViewModel =
+                new ViewModelProvider(this).get(HabitsViewModel.class);
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
+        binding = FragmentHabitsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textHabits;
+        HabitsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

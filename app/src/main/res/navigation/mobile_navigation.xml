@@ -12,14 +12,20 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.self_care_companion.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_journal"
+        android:name="com.example.self_care_companion.ui.journal.JournalFragment"
+        android:label="@string/title_journal"
+        tools:layout="@layout/fragment_journal" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.self_care_companion.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_habits"
+        android:name="com.example.self_care_companion.ui.habits.HabitsFragment"
+        android:label="@string/title_habits"
+        tools:layout="@layout/fragment_habits" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.self_care_companion.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
