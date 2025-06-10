@@ -9,6 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#FFFFF0F1</color>
     <color name="button">#FFCED1F8</color>
-    <color name="button_pressed">#A7ABDE</color>
+    <color name="button_pressed">#9FA3D8</color>
     <color name="secondary">#FFECD2E0</color>
 </resources>

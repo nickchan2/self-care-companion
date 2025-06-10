@@ -21,7 +21,11 @@
         android:id="@+id/navigation_journal"
         android:name="com.example.self_care_companion.ui.journal.JournalFragment"
         android:label="@string/title_journal"
-        tools:layout="@layout/fragment_journal" />
+        tools:layout="@layout/fragment_journal" >
+        <argument
+            android:name="moodParam"
+            app:argType="string" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_habits"
