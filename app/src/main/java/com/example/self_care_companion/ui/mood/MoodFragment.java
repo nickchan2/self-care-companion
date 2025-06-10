@@ -1,19 +1,26 @@
 package com.example.self_care_companion.ui.mood;
 
+import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.self_care_companion.R;
 import com.example.self_care_companion.databinding.FragmentMoodBinding;
+
+import java.util.List;
 
 public class MoodFragment extends Fragment {
 
@@ -28,9 +35,52 @@ public class MoodFragment extends Fragment {
         binding = FragmentMoodBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        binding.homeButton.setOnClickListener(v -> {
+            Navigation.findNavController(v).navigate(R.id.navigation_home);
+        });
+
+        binding.nextButton.setOnClickListener(v -> {
+            List<String> moods = MoodViewModel.getSelectedMoods().getValue();
+            if (moods != null && !moods.isEmpty()) {
+                String selectedMood = moods.get(0);
+                Bundle bundle = new Bundle();
+                bundle.putString("moodParam", selectedMood);
+                Navigation.findNavController(v).navigate(R.id.navigation_journal, bundle);
+            } else {
+                Navigation.findNavController(v).navigate(R.id.navigation_journal);
+            }
+        });
+
+        MoodViewModel viewModel = new ViewModelProvider(this).get(MoodViewModel.class);
+
+        setupMoodButton(binding.mood1btn, "Happy");
+        setupMoodButton(binding.mood2btn, "Sad");
+        setupMoodButton(binding.mood3btn, "Excited");
+        setupMoodButton(binding.mood4btn, "Stressed");
+        setupMoodButton(binding.mood5btn, "Calm");
+        setupMoodButton(binding.mood6btn, "Anxious");
+
         final TextView textView = binding.textMood;
         MoodViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
+    }
+
+    private void toggleMoodButtonTint(Button button) {
+        int pressedColor = ContextCompat.getColor(requireContext(), R.color.button_pressed);
+        int defaultColor = ContextCompat.getColor(requireContext(), R.color.button);
+
+        ColorStateList currentTint = button.getBackgroundTintList();
+        if (currentTint != null && currentTint.getDefaultColor() == pressedColor) {
+            button.setBackgroundTintList(ColorStateList.valueOf(defaultColor));
+        } else {
+            button.setBackgroundTintList(ColorStateList.valueOf(pressedColor));
+        }
+    }
+    private void setupMoodButton(Button button, String moodName) {
+        button.setOnClickListener(v -> {
+            toggleMoodButtonTint(button);
+            MoodViewModel.toggleMood(moodName);
+        });
     }
 
     @Override
