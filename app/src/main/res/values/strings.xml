@@ -16,4 +16,9 @@
     <string name="mood_option_4">Stressed :|</string>
     <string name="mood_option_5">Calm ^_^</string>
     <string name="mood_option_6">Anxious >:(</string>
+    <string name="self_care_companion">SELF-CARE COMPANION</string>
+    <string name="hello">Hello!</string>
+    <string name="check_in">Check In</string>
+    <string name="track_habits">Track Habits</string>
+    <string name="journal_button">Journal</string>
 </resources>
