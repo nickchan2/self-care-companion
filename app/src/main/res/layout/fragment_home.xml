@@ -5,52 +5,48 @@
     android:background="#FFF0F1"
     android:padding="16dp">
 
-    <!-- Top Titles -->
-    <TextView
-        android:id="@+id/home_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOME"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:textColor="#000000"
-        android:layout_centerHorizontal="true"/>
-
-    <TextView
-        android:id="@+id/app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SELF-CARE COMPANION"
-        android:textSize="16sp"
-        android:textColor="#000000"
-        android:layout_below="@id/home_title"
-        android:layout_marginTop="8dp"
-        android:layout_centerHorizontal="true"/>
-
-    <!-- Greeting -->
-    <TextView
-        android:id="@+id/greeting_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello!"
-        android:textSize="18sp"
-        android:textColor="#000000"
-        android:layout_below="@id/app_name"
-        android:layout_marginTop="24dp"
-        android:layout_centerHorizontal="true"/>
-
-    <!-- Buttons -->
+    <!-- UI Content Block: centered slightly downward -->
     <LinearLayout
-        android:id="@+id/button_container"
+        android:id="@+id/content_wrapper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
-        android:layout_below="@id/greeting_text"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp">
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="80dp">
 
+        <!-- Top Titles -->
+        <TextView
+            android:id="@+id/home_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOME"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SELF-CARE COMPANION"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Greeting -->
+        <TextView
+            android:id="@+id/greeting_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello!"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Buttons -->
         <Button
             android:id="@+id/checkin_button"
             android:layout_width="match_parent"
@@ -78,7 +74,7 @@
             android:textColor="#000000"/>
     </LinearLayout>
 
-    <!-- Bottom Nav -->
+    <!-- Bottom Navigation Bar -->
     <LinearLayout
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
