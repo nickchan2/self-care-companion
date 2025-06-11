@@ -1,5 +1,7 @@
 package com.example.self_care_companion.ui.insights;
 
+import static com.example.self_care_companion.MainActivity.databaseHelper;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -81,12 +83,7 @@ public class InsightsFragment extends Fragment {
 
         List<String> moods = new ArrayList<>(moodSuggestions.keySet());
 
-        Bundle args = getArguments();
-        String moodParam = null;
-
-        if (args != null) {
-            moodParam = args.getString("moodParam");
-        }
+        String moodParam = databaseHelper.getMostFrequentMood();
         String noDataText = "No mood data available";
 
         if (moods.contains(moodParam)) {
