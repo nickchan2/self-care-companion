@@ -1,5 +1,7 @@
 package com.example.self_care_companion.ui.mood;
 
+import static com.example.self_care_companion.MainActivity.databaseHelper;
+
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -41,11 +43,12 @@ public class MoodFragment extends Fragment {
 
         binding.nextButton.setOnClickListener(v -> {
             List<String> moods = MoodViewModel.getSelectedMoods().getValue();
+
             if (moods != null && !moods.isEmpty()) {
-                String selectedMood = moods.get(0);
-                Bundle bundle = new Bundle();
-                bundle.putString("moodParam", selectedMood);
-                Navigation.findNavController(v).navigate(R.id.navigation_journal, bundle);
+                for (String mood: moods) {
+                    databaseHelper.addMood(mood);
+                }
+                Navigation.findNavController(v).navigate(R.id.navigation_journal);
             } else {
                 Navigation.findNavController(v).navigate(R.id.navigation_journal);
             }

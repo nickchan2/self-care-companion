@@ -1,5 +1,7 @@
 package com.example.self_care_companion.ui.journal;
 
+import static com.example.self_care_companion.MainActivity.databaseHelper;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,25 +25,18 @@ public class JournalFragment extends Fragment {
         JournalViewModel journalViewModel =
                 new ViewModelProvider(this).get(JournalViewModel.class);
 
-        Bundle args = getArguments();
-        String moodParam;
-
-        if (args != null) {
-            moodParam = args.getString("moodParam");
-        } else {
-            moodParam = null;
-        }
-
         binding = FragmentJournalBinding.inflate(inflater, container, false);
 
-        binding.nextButton.setOnClickListener(v -> {
-            if (moodParam != null && !moodParam.isEmpty()) {
-                Bundle bundle = new Bundle();
-                bundle.putString("moodParam", moodParam);
-                Navigation.findNavController(v).navigate(R.id.navigation_insights, bundle);
-            } else {
-                Navigation.findNavController(v).navigate(R.id.navigation_insights);
+        binding.saveButton.setOnClickListener(v -> {
+            String journalEntry = binding.journalInput.getText().toString();
+
+            if (!journalEntry.isEmpty()) {
+                databaseHelper.addJournalEntry(journalEntry);
             }
+        });
+
+        binding.nextButton.setOnClickListener(v -> {
+            Navigation.findNavController(v).navigate(R.id.navigation_insights);
         });
 
         return binding.getRoot();

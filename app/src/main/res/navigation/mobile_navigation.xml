@@ -21,11 +21,7 @@
         android:id="@+id/navigation_journal"
         android:name="com.example.self_care_companion.ui.journal.JournalFragment"
         android:label="@string/title_journal"
-        tools:layout="@layout/fragment_journal" >
-        <argument
-            android:name="moodParam"
-            app:argType="string" />
-    </fragment>
+        tools:layout="@layout/fragment_journal" />
 
     <fragment
         android:id="@+id/navigation_habits"
@@ -43,11 +39,6 @@
         android:id="@+id/navigation_insights"
         android:name="com.example.self_care_companion.ui.insights.InsightsFragment"
         android:label="@string/insights"
-        tools:layout="@layout/fragment_insights" >
+        tools:layout="@layout/fragment_insights" />
 
-        <argument
-            android:name="moodParam"
-            app:argType="string" />
-
-    </fragment>
 </navigation>
