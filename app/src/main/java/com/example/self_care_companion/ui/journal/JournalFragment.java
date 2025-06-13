@@ -35,6 +35,10 @@ public class JournalFragment extends Fragment {
             }
         });
 
+        binding.backButton.setOnClickListener(v -> {
+            Navigation.findNavController(v).navigate(R.id.navigation_mood);
+        });
+
         binding.nextButton.setOnClickListener(v -> {
             Navigation.findNavController(v).navigate(R.id.navigation_insights);
         });

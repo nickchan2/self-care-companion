@@ -54,6 +54,32 @@ public class MoodFragment extends Fragment {
             }
         });
 
+        List<String> selectedMoods = MoodViewModel.getSelectedMoods().getValue();
+        if (selectedMoods != null && !selectedMoods.isEmpty()) {
+            for (String mood : selectedMoods) {
+                switch (mood) {
+                    case "Happy":
+                        toggleMoodButtonTint(binding.mood1btn);
+                        break;
+                    case "Sad":
+                        toggleMoodButtonTint(binding.mood2btn);
+                        break;
+                    case "Excited":
+                        toggleMoodButtonTint(binding.mood3btn);
+                        break;
+                    case "Stressed":
+                        toggleMoodButtonTint(binding.mood4btn);
+                        break;
+                    case "Calm":
+                        toggleMoodButtonTint(binding.mood5btn);
+                        break;
+                    case "Anxious":
+                        toggleMoodButtonTint(binding.mood6btn);
+                        break;
+                }
+            }
+        }
+
         MoodViewModel viewModel = new ViewModelProvider(this).get(MoodViewModel.class);
 
         setupMoodButton(binding.mood1btn, "Happy");
