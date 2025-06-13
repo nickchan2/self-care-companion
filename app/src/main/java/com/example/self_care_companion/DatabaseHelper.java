@@ -66,7 +66,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("first_name", firstName);
         values.put("email", email);
-        values.put("pin", pin);
+        values.put("pin", hashPin(pin));
         db.insert("User", null, values);
         db.close();
     }
