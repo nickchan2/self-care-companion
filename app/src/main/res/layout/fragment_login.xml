@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFF0F1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your PIN"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/pin_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:hint="PIN" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#CED1F8"
+        android:textColor="#000000"/>
+</LinearLayout>

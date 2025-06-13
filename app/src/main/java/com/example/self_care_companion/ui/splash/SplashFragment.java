@@ -39,7 +39,7 @@ public class SplashFragment extends Fragment {
         });
 
         loginBtn.setOnClickListener(v -> {
-            Navigation.findNavController(view).navigate(R.id.action_splashFragment_to_mainFragment);
+            Navigation.findNavController(view).navigate(R.id.action_splashFragment_to_loginFragment);
         });
 
         return view;
