@@ -15,7 +15,12 @@
         android:id="@+id/navigation_home"
         android:name="com.example.self_care_companion.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_navigation_home_to_journalNavFragment"
+            app:destination="@id/navigation_journal_nobutton" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_mood"
@@ -46,6 +51,12 @@
         android:name="com.example.self_care_companion.ui.insights.InsightsFragment"
         android:label="@string/insights"
         tools:layout="@layout/fragment_insights" />
+
+    <fragment
+        android:id="@+id/navigation_journal_nobutton"
+        android:name="com.example.self_care_companion.ui.journal.JournalNavFragment"
+        android:label="Journal"
+        tools:layout="@layout/fragment_journal_nav" />
 
     <action
         android:id="@+id/action_splashFragment_to_mainFragment"
