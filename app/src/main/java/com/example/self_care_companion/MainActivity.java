@@ -1,6 +1,7 @@
 package com.example.self_care_companion;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -25,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_mood, R.id.navigation_journal, R.id.navigation_habits)
                 .build();
@@ -34,7 +33,22 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
+        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+            if (destination.getId() == R.id.splashFragment) {
+                if (getSupportActionBar() != null) {
+                    getSupportActionBar().hide(); // Hide top app bar
+                }
+                navView.setVisibility(View.GONE); // Hide bottom nav
+            } else {
+                if (getSupportActionBar() != null) {
+                    getSupportActionBar().show(); // Show top app bar
+                }
+                navView.setVisibility(View.VISIBLE); // Show bottom nav
+            }
+        });
+
         databaseHelper = new DatabaseHelper(this);
     }
+
 
 }
