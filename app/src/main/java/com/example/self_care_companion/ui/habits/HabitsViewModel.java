@@ -10,7 +10,7 @@ public class HabitsViewModel extends ViewModel {
 
     public HabitsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is habits fragment");
+        mText.setValue("HABIT TRACKER");
     }
 
     public LiveData<String> getText() {
