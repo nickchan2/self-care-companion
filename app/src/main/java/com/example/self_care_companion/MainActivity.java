@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
 
         navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
-            if (destination.getId() == R.id.splashFragment || destination.getId() == R.id.loginFragment) {
+            if (destination.getId() == R.id.splashFragment || destination.getId() == R.id.loginFragment || destination.getId() == R.id.signUpFragment) {
                 if (getSupportActionBar() != null) {
                     getSupportActionBar().hide(); // Hide top app bar
                 }

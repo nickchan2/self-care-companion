@@ -153,5 +153,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
         return pin;
     }
+
+    public void deleteAllUsers() {
+        // useful when you want to test the sign up page
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("User", null, null);
+        db.close();
+    }
 }
 
