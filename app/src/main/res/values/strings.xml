@@ -26,4 +26,9 @@
     <string name="check_in">Check In</string>
     <string name="track_habits">Track Habits</string>
     <string name="journal_button">Journal</string>
+    <string name="habit_tracker">HABIT TRACKER</string>
+    <string name="unit">unit</string>
+    <string name="new_habit">New Habit</string>
+    <string name="add_habit">+ ADD HABIT</string>
+    <string name="save_today_s_habits">SAVE TODAY\'S HABITS</string>
 </resources>
