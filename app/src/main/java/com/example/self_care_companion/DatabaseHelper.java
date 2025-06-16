@@ -9,6 +9,8 @@ import android.content.ContentValues;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.HashSet;
+import java.util.Set;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "SelfCareCompanionApp.db";
@@ -95,6 +97,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put("units", units);
         db.insert("Habit", null, values);
         db.close();
+    }
+
+    public Set<String> getUniqueHabits() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT DISTINCT label, units FROM Habit";
+        Cursor cursor = db.rawQuery(query, null);
+
+        Set<String> habits = new HashSet<>();
+
+        if (cursor.moveToFirst()) {
+            do {
+                String label = cursor.getString(0);
+                String units = cursor.getString(1);
+
+                String habit = label + "|" + units;
+                habits.add(habit);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+
+        return habits;
     }
 
     public String getMostFrequentMood() {
