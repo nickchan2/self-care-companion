@@ -31,4 +31,7 @@
     <string name="new_habit">New Habit</string>
     <string name="add_habit">+ ADD HABIT</string>
     <string name="save_today_s_habits">SAVE TODAY\'S HABITS</string>
+    <string name="enter_units">Enter units (e.g., cals, hrs)</string>
+    <string name="enter_habit_name">Enter habit name</string>
+    <string name="enter_habit_value">Enter value</string>
 </resources>
