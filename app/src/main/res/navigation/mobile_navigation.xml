@@ -46,6 +46,12 @@
         tools:layout="@layout/fragment_journal" />
 
     <fragment
+        android:id="@+id/navigation_journal_prompt"
+        android:name="com.example.self_care_companion.ui.journal.JournalPromptFragment"
+        android:label="@string/title_journal"
+        tools:layout="@layout/fragment_journal_prompt" />
+
+    <fragment
         android:id="@+id/navigation_habits"
         android:name="com.example.self_care_companion.ui.habits.HabitsFragment"
         android:label="@string/title_habits"
