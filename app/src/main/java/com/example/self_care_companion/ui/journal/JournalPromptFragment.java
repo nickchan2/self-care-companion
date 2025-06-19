@@ -32,7 +32,7 @@ public class JournalPromptFragment extends Fragment {
             BottomNavigationView navView = requireActivity().findViewById(R.id.nav_view);
 
             navController.popBackStack(R.id.navigation_home, false);
-            navView.setSelectedItemId(R.id.navigation_home);  // triggers nav + syncs bottom nav UI
+            navView.setSelectedItemId(R.id.navigation_home); // triggers nav + syncs bottom nav UI
         });
 
         Button yesButton = view.findViewById(R.id.yes_btn);
